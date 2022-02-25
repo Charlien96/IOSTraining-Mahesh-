@@ -14,16 +14,25 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBOutlet weak var userName: UITextField!
+    @IBOutlet weak var userNameTxt: UITextField!
     
-    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var passwordTxt: UITextField!
+    
     @IBAction func loginBtn(_ sender: Any) {
-        if userName.text == "UserName" && password.text == "Password" {
+        if userNameTxt.text == "UserName" && passwordTxt.text == "Password" {
             print("Login successful")
+            performSegue(withIdentifier: "homeSegue", sender: nil)
         }
         else {
             print("Login unsuccessful")
         }
+    }
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let homeViewController = segue.destination as! HomeViewController
+        homeViewController.userName = userNameTxt.text ?? "nil"
     }
 }
 
