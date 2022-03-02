@@ -12,14 +12,6 @@ struct Employees {
     let lastName:String
     let age:Int
     let company:String
-    
-}
-
-class EmployeeCell: UITableViewCell {
-    @IBOutlet weak var fNameLbl: UILabel!
-    @IBOutlet weak var lNameLbl: UILabel!
-    @IBOutlet weak var ageLbl: UILabel!
-    @IBOutlet weak var companyLbl: UILabel!
 }
 
 class ViewController: UIViewController, UITableViewDataSource{
