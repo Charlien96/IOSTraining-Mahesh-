@@ -17,7 +17,7 @@ struct UserResponce: Decodable {
 }
 
 struct User: Decodable {
-    let id: Int
+    let id: Int?
     let email: String
     let first_name: String
     let last_name: String

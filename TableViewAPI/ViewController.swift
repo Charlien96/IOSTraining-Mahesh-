@@ -45,7 +45,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tblViewCell", for: indexPath) as! UserCell
-        cell.idLbl.text = "\(users[indexPath.row].id)"
+        cell.userImageView.getImage(avatar: users[indexPath.row].avatar!)
         cell.emailLbl.text = "\(users[indexPath.row].email)"
         cell.firstNameLbl.text = "\(users[indexPath.row].first_name)"
         cell.lastNameLbl.text = "\(users[indexPath.row].last_name)"
