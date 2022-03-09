@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		844CD46827CF8DA700433A77 /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844CD46727CF8DA700433A77 /* EmployeeCell.swift */; };
 		847575D827CCF27A006DD48E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847575D727CCF27A006DD48E /* AppDelegate.swift */; };
 		847575DA27CCF27A006DD48E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847575D927CCF27A006DD48E /* SceneDelegate.swift */; };
 		847575DC27CCF27A006DD48E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847575DB27CCF27A006DD48E /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		844CD46727CF8DA700433A77 /* EmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
 		847575D427CCF27A006DD48E /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		847575D727CCF27A006DD48E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		847575D927CCF27A006DD48E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				847575D727CCF27A006DD48E /* AppDelegate.swift */,
 				847575D927CCF27A006DD48E /* SceneDelegate.swift */,
 				847575DB27CCF27A006DD48E /* ViewController.swift */,
+				844CD46727CF8DA700433A77 /* EmployeeCell.swift */,
 				847575DD27CCF27A006DD48E /* Main.storyboard */,
 				847575E027CCF27C006DD48E /* Assets.xcassets */,
 				847575E227CCF27C006DD48E /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				847575DC27CCF27A006DD48E /* ViewController.swift in Sources */,
+				844CD46827CF8DA700433A77 /* EmployeeCell.swift in Sources */,
 				847575D827CCF27A006DD48E /* AppDelegate.swift in Sources */,
 				847575DA27CCF27A006DD48E /* SceneDelegate.swift in Sources */,
 			);
