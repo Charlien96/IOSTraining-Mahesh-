@@ -15,74 +15,9 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Py5-H0-ZUC">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tblViewCell" id="mML-FM-QQS" customClass="UserCell" customModule="TableViewAPI" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mML-FM-QQS" id="Mby-mN-VVx">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="Dn0-KV-aAQ">
-                                                    <rect key="frame" x="10" y="-28.5" width="394" height="100.5"/>
-                                                    <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zyj-1o-z8i">
-                                                            <rect key="frame" x="0.0" y="0.0" width="77" height="100.5"/>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ebq-1W-4A2">
-                                                            <rect key="frame" x="106" y="0.0" width="76.5" height="100.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qha-dP-ulB">
-                                                            <rect key="frame" x="211.5" y="0.0" width="77" height="100.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lF-HJ-Z0k">
-                                                            <rect key="frame" x="317.5" y="0.0" width="76.5" height="100.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="Dn0-KV-aAQ" secondAttribute="trailing" constant="10" id="FUl-dU-ISy"/>
-                                                <constraint firstItem="Dn0-KV-aAQ" firstAttribute="centerY" secondItem="Mby-mN-VVx" secondAttribute="centerY" id="Wsr-aL-oSY"/>
-                                                <constraint firstItem="Dn0-KV-aAQ" firstAttribute="centerX" secondItem="Mby-mN-VVx" secondAttribute="centerX" id="Xyt-Nq-HDB"/>
-                                                <constraint firstItem="Dn0-KV-aAQ" firstAttribute="leading" secondItem="Mby-mN-VVx" secondAttribute="leading" constant="10" id="yOJ-bW-6ND"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="emailLbl" destination="Ebq-1W-4A2" id="ebP-Kq-d5E"/>
-                                            <outlet property="firstNameLbl" destination="Qha-dP-ulB" id="sHj-gF-0Wb"/>
-                                            <outlet property="lastNameLbl" destination="9lF-HJ-Z0k" id="pCD-ia-ozw"/>
-                                            <outlet property="userImageView" destination="Zyj-1o-z8i" id="pHW-EN-h3I"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Py5-H0-ZUC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JmE-Ok-URw"/>
-                            <constraint firstItem="Py5-H0-ZUC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oTy-Zg-7ZY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Py5-H0-ZUC" secondAttribute="trailing" id="rDu-Cc-KDH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Py5-H0-ZUC" secondAttribute="bottom" id="v2o-et-e4a"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="tblView" destination="Py5-H0-ZUC" id="FZG-ue-g05"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

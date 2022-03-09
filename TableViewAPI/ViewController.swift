@@ -7,16 +7,25 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
-    @IBOutlet weak var tblView: UITableView!
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+    let tblView = UITableView()
+    
     var users: [User] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         //tblView.dataSource = self
+        self.view.addSubview(tblView)
+        tblView.translatesAutoresizingMaskIntoConstraints = false
+        tblView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0.0).isActive = true
+        tblView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 0.0).isActive = true
+        tblView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0.0).isActive = true
+        tblView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0.0).isActive = true
+        tblView.register(UserCell.self, forCellReuseIdentifier: "tblViewCell")
         getUsers()
         tblView.dataSource = self
+        tblView.delegate = self
     }
     
     func getUsers() {
@@ -45,11 +54,15 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tblViewCell", for: indexPath) as! UserCell
-        cell.userImageView.getImage(avatar: users[indexPath.row].avatar!)
+        cell.userImgView.getImage(avatar: users[indexPath.row].avatar!)
         cell.emailLbl.text = "\(users[indexPath.row].email)"
         cell.firstNameLbl.text = "\(users[indexPath.row].first_name)"
         cell.lastNameLbl.text = "\(users[indexPath.row].last_name)"
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+       return 150
     }
     
 }
