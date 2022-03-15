@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		846FB42027E097FE00EFA9FB /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846FB41F27E097FE00EFA9FB /* ViewModel.swift */; };
 		8474EE4127DF48CA00C7CE81 /* DownloadImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474EE4027DF48CA00C7CE81 /* DownloadImg.swift */; };
 		8474EE4327DF495A00C7CE81 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474EE4227DF495A00C7CE81 /* CollectionViewCell.swift */; };
 		8474EE4527DF4BB700C7CE81 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474EE4427DF4BB700C7CE81 /* NetworkManager.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		846FB41F27E097FE00EFA9FB /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		8474EE4027DF48CA00C7CE81 /* DownloadImg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImg.swift; sourceTree = "<group>"; };
 		8474EE4227DF495A00C7CE81 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		8474EE4427DF4BB700C7CE81 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				8474EE4027DF48CA00C7CE81 /* DownloadImg.swift */,
 				8474EE4227DF495A00C7CE81 /* CollectionViewCell.swift */,
 				8474EE4427DF4BB700C7CE81 /* NetworkManager.swift */,
+				846FB41F27E097FE00EFA9FB /* ViewModel.swift */,
 				848689E227DA523300662782 /* ViewController.swift */,
 				848689E427DA523300662782 /* Main.storyboard */,
 				848689E727DA523500662782 /* Assets.xcassets */,
@@ -276,6 +279,7 @@
 				8474EE4527DF4BB700C7CE81 /* NetworkManager.swift in Sources */,
 				8474EE4127DF48CA00C7CE81 /* DownloadImg.swift in Sources */,
 				848B11AF27DB4ECF004541ED /* PhotoData.swift in Sources */,
+				846FB42027E097FE00EFA9FB /* ViewModel.swift in Sources */,
 				848689E127DA523300662782 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

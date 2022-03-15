@@ -11,20 +11,21 @@ class ViewController: UIViewController, UISearchBarDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
-    var networkManager : NetworkManager!
+    var viewModel: ViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         collectionView.dataSource = self
         searchBar.delegate = self
-        networkManager = NetworkManager(viewController: self)
+        viewModel = ViewModel(delegate: self)
+        viewModel.delegate = self
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         if let text = searchBar.text {
-            networkManager.getImage(searchText: text)
+            viewModel.getImage(searchText: text)
         }
     }
 }
@@ -32,14 +33,14 @@ class ViewController: UIViewController, UISearchBarDelegate {
 extension ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return networkManager.data.count
+        return viewModel.data.count
     }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "colViewCell", for: indexPath) as! CollectionViewCell
-        let search = networkManager.data[indexPath.row]
+        let search = viewModel.data[indexPath.row]
         
         let farmValue = search.farm
         let server = search.server
