@@ -1,24 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U1r-fh-G3h">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Flicker Image Search-->
+        <scene sceneID="x88-wg-Z1e">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="wd9-Tt-zkf" customClass="ViewController" customModule="CollectionViewFlicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ho3-VD-4km">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="tXu-Jq-n6h">
+                                <rect key="frame" x="0.0" y="88" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Za4-Hz-JCh">
+                                <rect key="frame" x="10" y="149" width="394" height="703"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Nfg-Gs-XUK">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="colViewCell" id="Xae-N8-TSe" customClass="CollectionViewCell" customModule="CollectionViewFlicker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wg5-Jb-JMu">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rRy-wx-Ydw">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="rRy-wx-Ydw" secondAttribute="bottom" id="0Jc-Vz-XUG"/>
+                                                <constraint firstAttribute="trailing" secondItem="rRy-wx-Ydw" secondAttribute="trailing" id="Fgw-mO-ODe"/>
+                                                <constraint firstItem="rRy-wx-Ydw" firstAttribute="top" secondItem="wg5-Jb-JMu" secondAttribute="top" id="p4l-2r-O2S"/>
+                                                <constraint firstItem="rRy-wx-Ydw" firstAttribute="leading" secondItem="wg5-Jb-JMu" secondAttribute="leading" id="t7Z-zJ-K05"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgView" destination="rRy-wx-Ydw" id="Z7o-nh-uTK"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="47c-EW-Hei"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tXu-Jq-n6h" firstAttribute="leading" secondItem="47c-EW-Hei" secondAttribute="leading" id="1he-Av-01A"/>
+                            <constraint firstItem="tXu-Jq-n6h" firstAttribute="trailing" secondItem="47c-EW-Hei" secondAttribute="trailing" id="1vt-46-Raj"/>
+                            <constraint firstItem="Za4-Hz-JCh" firstAttribute="leading" secondItem="47c-EW-Hei" secondAttribute="leading" constant="10" id="Bd4-Kz-hil"/>
+                            <constraint firstItem="tXu-Jq-n6h" firstAttribute="top" secondItem="47c-EW-Hei" secondAttribute="top" id="Cm2-cy-4Pn"/>
+                            <constraint firstItem="Za4-Hz-JCh" firstAttribute="top" secondItem="tXu-Jq-n6h" secondAttribute="bottom" constant="10" id="JpL-T9-Zbr"/>
+                            <constraint firstItem="47c-EW-Hei" firstAttribute="trailing" secondItem="Za4-Hz-JCh" secondAttribute="trailing" constant="10" id="djP-h8-47B"/>
+                            <constraint firstItem="47c-EW-Hei" firstAttribute="bottom" secondItem="Za4-Hz-JCh" secondAttribute="bottom" constant="10" id="yO5-qV-WYk"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Flicker Image Search" id="An7-TO-jSP"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Za4-Hz-JCh" id="979-zi-uST"/>
+                        <outlet property="searchBar" destination="tXu-Jq-n6h" id="H3w-3m-UlU"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eoy-u9-pmF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1578.2608695652175" y="51.5625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DXf-Yr-V0C">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="U1r-fh-G3h" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MGV-qE-ZYe">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wd9-Tt-zkf" kind="relationship" relationship="rootViewController" id="7zn-Kh-zED"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IBh-Ms-o76" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="668.11594202898561" y="51.5625"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
