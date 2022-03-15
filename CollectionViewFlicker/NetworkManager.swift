@@ -14,12 +14,9 @@ protocol Images {
 
 class NetworkManager: Images {
     
-    weak var viewController : RefreshView?
-        init(viewController: RefreshView) {
-            self.viewController = viewController
-        }
+    weak var delegateViewModel: ViewModelType?
         
-        var data: [Photo] = []
+    var data: [Photo] = []
     
     func getImage(searchText: String) {
             let urlstr = "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=0e08e76eff544231b992197c7c7c22a9&text=\(searchText)&format=json&nojsoncallback=1"
@@ -39,7 +36,7 @@ class NetworkManager: Images {
                     self.data = decodedResponce.photos.photo
                    print("data")
                     
-                    self.viewController?.refresh()
+                    self.delegateViewModel?.updateImg(responce: decodedResponce)
                 
                 }catch{
                     print(error.localizedDescription)
