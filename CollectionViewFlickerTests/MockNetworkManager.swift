@@ -25,11 +25,9 @@ class MockNetworkManager: ImageSearch {
             let decoded = JSONDecoder()
             do{
                 let decodedResponce = try decoded.decode(PhotoData.self, from: data)
-
                 self.delegateViewModel?.updateImg(responce: decodedResponce)
-
             }catch{
-                print("No data")
+                print(error.localizedDescription)
             }
         }catch {
             

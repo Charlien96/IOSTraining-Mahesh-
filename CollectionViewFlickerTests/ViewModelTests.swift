@@ -27,23 +27,14 @@ class ViewModelTests: XCTestCase {
 
     func testGetImages() {
         // GIVEN
-        
          let searchText = "dog"
         
-        
         // When
-        
         XCTAssertEqual(viewModel.data.count, 0)
-
         viewModel.getImage(searchText: searchText)
         
         // Then
-        
         XCTAssertEqual(viewModel.data.count, 100)
-        
-        
         XCTAssertEqual(viewModel.data[14].title, "TANGO")
     }
-    
-
 }
