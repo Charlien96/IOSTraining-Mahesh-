@@ -7,16 +7,15 @@
 
 import Foundation
 
-protocol Images {
+protocol ImageSearch {
     
+    var delegateViewModel: ViewModelType? {get set}
     func getImage(searchText: String)
 }
 
-class NetworkManager: Images {
+class NetworkManager: ImageSearch {
     
     weak var delegateViewModel: ViewModelType?
-        
-    var data: [Photo] = []
     
     func getImage(searchText: String) {
             let urlstr = "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=0e08e76eff544231b992197c7c7c22a9&text=\(searchText)&format=json&nojsoncallback=1"
@@ -27,21 +26,17 @@ class NetworkManager: Images {
                 return
             }
             let session = URLSession.shared
-            let datatask = session.dataTask(with: url!) {
+            let dataTask = session.dataTask(with: url!) {
                 data, responce, error in
                 
                 let decoded = JSONDecoder()
                 do{
                     let decodedResponce = try decoded.decode(PhotoData.self, from: data!)
-                    self.data = decodedResponce.photos.photo
-                   print("data")
-                    
                     self.delegateViewModel?.updateImg(responce: decodedResponce)
-                
                 }catch{
                     print(error.localizedDescription)
                 }
             }
-            datatask.resume()
+            dataTask.resume()
         }
 }

@@ -8,9 +8,9 @@
 import Foundation
 @testable import CollectionViewFlicker
 
-class MockNetworkManager: Images {
-
-    var data: [Photo] = []
+class MockNetworkManager: ImageSearch {
+    
+    var delegateViewModel: ViewModelType?
 
     func getImage(searchText: String) {
         let bundle = Bundle(for: MockNetworkManager.self)
@@ -19,22 +19,21 @@ class MockNetworkManager: Images {
         guard url != nil else  {
             return
         }
-        let session = URLSession.shared
-        let datatask = session.dataTask(with: url) {
-            data, responce, error in
+        do {
+            let data = try Data(contentsOf: url)
             
             let decoded = JSONDecoder()
             do{
-                let decodedResponce = try decoded.decode(PhotoData.self, from: data!)
-                self.data = decodedResponce.photos.photo
-                print("data")
-                
-            
+                let decodedResponce = try decoded.decode(PhotoData.self, from: data)
+
+                self.delegateViewModel?.updateImg(responce: decodedResponce)
+
             }catch{
                 print("No data")
             }
+        }catch {
+            
         }
-        datatask.resume()
     }
 }
 

@@ -11,9 +11,13 @@ import XCTest
 class ViewModelTests: XCTestCase {
 
     var mockNetwork: MockNetworkManager!
+    var viewModel: ViewModel!
     
     override func setUpWithError() throws {
-       mockNetwork = MockNetworkManager()
+        let controller =  ViewController()
+        viewModel = ViewModel(delegate: controller)
+        mockNetwork = MockNetworkManager()
+        viewModel.networkManager = mockNetwork
 
     }
 
@@ -22,8 +26,23 @@ class ViewModelTests: XCTestCase {
     }
 
     func testGetImages() {
-        mockNetwork.getImage(searchText: "")
-        XCTAssert(mockNetwork.data != nil)
+        // GIVEN
+        
+         let searchText = "dog"
+        
+        
+        // When
+        
+        XCTAssertEqual(viewModel.data.count, 0)
+
+        viewModel.getImage(searchText: searchText)
+        
+        // Then
+        
+        XCTAssertEqual(viewModel.data.count, 100)
+        
+        
+        XCTAssertEqual(viewModel.data[14].title, "TANGO")
     }
     
 
