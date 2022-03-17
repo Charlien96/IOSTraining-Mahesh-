@@ -13,7 +13,7 @@ protocol ViewModelType: AnyObject {
 
 class ViewModel: ViewModelType {
     weak var delegate: RefreshView?
-    let networkManager = NetworkManager()
+    var networkManager: ImageSearch = NetworkManager()
     init(delegate: RefreshView) {
         self.delegate = delegate
     }

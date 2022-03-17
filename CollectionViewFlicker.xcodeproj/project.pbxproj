@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8460C12627E2034600635DAB /* Images.json in Resources */ = {isa = PBXBuildFile; fileRef = 8460C12527E2034600635DAB /* Images.json */; };
 		846FB42027E097FE00EFA9FB /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846FB41F27E097FE00EFA9FB /* ViewModel.swift */; };
+		846FB42227E0A6D800EFA9FB /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846FB42127E0A6D800EFA9FB /* ViewModelTests.swift */; };
+		846FB42427E0B51500EFA9FB /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846FB42327E0B51500EFA9FB /* MockNetworkManager.swift */; };
 		8474EE4127DF48CA00C7CE81 /* DownloadImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474EE4027DF48CA00C7CE81 /* DownloadImg.swift */; };
 		8474EE4327DF495A00C7CE81 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474EE4227DF495A00C7CE81 /* CollectionViewCell.swift */; };
 		8474EE4527DF4BB700C7CE81 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474EE4427DF4BB700C7CE81 /* NetworkManager.swift */; };
@@ -20,6 +23,7 @@
 		848689F627DA523500662782 /* CollectionViewFlickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848689F527DA523500662782 /* CollectionViewFlickerTests.swift */; };
 		84868A0027DA523500662782 /* CollectionViewFlickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848689FF27DA523500662782 /* CollectionViewFlickerUITests.swift */; };
 		84868A0227DA523500662782 /* CollectionViewFlickerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84868A0127DA523500662782 /* CollectionViewFlickerUITestsLaunchTests.swift */; };
+		8487B32F27E347BF00D627CA /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487B32E27E347BF00D627CA /* FavoriteViewController.swift */; };
 		848B11AF27DB4ECF004541ED /* PhotoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B11AE27DB4ECF004541ED /* PhotoData.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8460C12527E2034600635DAB /* Images.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Images.json; sourceTree = "<group>"; };
 		846FB41F27E097FE00EFA9FB /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		846FB42127E0A6D800EFA9FB /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
+		846FB42327E0B51500EFA9FB /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
 		8474EE4027DF48CA00C7CE81 /* DownloadImg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImg.swift; sourceTree = "<group>"; };
 		8474EE4227DF495A00C7CE81 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		8474EE4427DF4BB700C7CE81 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -58,6 +65,7 @@
 		848689FB27DA523500662782 /* CollectionViewFlickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionViewFlickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		848689FF27DA523500662782 /* CollectionViewFlickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewFlickerUITests.swift; sourceTree = "<group>"; };
 		84868A0127DA523500662782 /* CollectionViewFlickerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewFlickerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8487B32E27E347BF00D627CA /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		848B11AE27DB4ECF004541ED /* PhotoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +125,7 @@
 				8474EE4427DF4BB700C7CE81 /* NetworkManager.swift */,
 				846FB41F27E097FE00EFA9FB /* ViewModel.swift */,
 				848689E227DA523300662782 /* ViewController.swift */,
+				8487B32E27E347BF00D627CA /* FavoriteViewController.swift */,
 				848689E427DA523300662782 /* Main.storyboard */,
 				848689E727DA523500662782 /* Assets.xcassets */,
 				848689E927DA523500662782 /* LaunchScreen.storyboard */,
@@ -129,6 +138,9 @@
 			isa = PBXGroup;
 			children = (
 				848689F527DA523500662782 /* CollectionViewFlickerTests.swift */,
+				846FB42127E0A6D800EFA9FB /* ViewModelTests.swift */,
+				846FB42327E0B51500EFA9FB /* MockNetworkManager.swift */,
+				8460C12527E2034600635DAB /* Images.json */,
 			);
 			path = CollectionViewFlickerTests;
 			sourceTree = "<group>";
@@ -256,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8460C12627E2034600635DAB /* Images.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +290,7 @@
 				848689DF27DA523300662782 /* AppDelegate.swift in Sources */,
 				8474EE4327DF495A00C7CE81 /* CollectionViewCell.swift in Sources */,
 				8474EE4527DF4BB700C7CE81 /* NetworkManager.swift in Sources */,
+				8487B32F27E347BF00D627CA /* FavoriteViewController.swift in Sources */,
 				8474EE4127DF48CA00C7CE81 /* DownloadImg.swift in Sources */,
 				848B11AF27DB4ECF004541ED /* PhotoData.swift in Sources */,
 				846FB42027E097FE00EFA9FB /* ViewModel.swift in Sources */,
@@ -288,6 +302,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846FB42427E0B51500EFA9FB /* MockNetworkManager.swift in Sources */,
+				846FB42227E0A6D800EFA9FB /* ViewModelTests.swift in Sources */,
 				848689F627DA523500662782 /* CollectionViewFlickerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
