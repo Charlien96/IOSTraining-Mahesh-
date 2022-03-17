@@ -23,6 +23,7 @@
 		848689F627DA523500662782 /* CollectionViewFlickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848689F527DA523500662782 /* CollectionViewFlickerTests.swift */; };
 		84868A0027DA523500662782 /* CollectionViewFlickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848689FF27DA523500662782 /* CollectionViewFlickerUITests.swift */; };
 		84868A0227DA523500662782 /* CollectionViewFlickerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84868A0127DA523500662782 /* CollectionViewFlickerUITestsLaunchTests.swift */; };
+		8487B32F27E347BF00D627CA /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487B32E27E347BF00D627CA /* FavoriteViewController.swift */; };
 		848B11AF27DB4ECF004541ED /* PhotoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B11AE27DB4ECF004541ED /* PhotoData.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		848689FB27DA523500662782 /* CollectionViewFlickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionViewFlickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		848689FF27DA523500662782 /* CollectionViewFlickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewFlickerUITests.swift; sourceTree = "<group>"; };
 		84868A0127DA523500662782 /* CollectionViewFlickerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewFlickerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8487B32E27E347BF00D627CA /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		848B11AE27DB4ECF004541ED /* PhotoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,7 @@
 				8474EE4427DF4BB700C7CE81 /* NetworkManager.swift */,
 				846FB41F27E097FE00EFA9FB /* ViewModel.swift */,
 				848689E227DA523300662782 /* ViewController.swift */,
+				8487B32E27E347BF00D627CA /* FavoriteViewController.swift */,
 				848689E427DA523300662782 /* Main.storyboard */,
 				848689E727DA523500662782 /* Assets.xcassets */,
 				848689E927DA523500662782 /* LaunchScreen.storyboard */,
@@ -287,6 +290,7 @@
 				848689DF27DA523300662782 /* AppDelegate.swift in Sources */,
 				8474EE4327DF495A00C7CE81 /* CollectionViewCell.swift in Sources */,
 				8474EE4527DF4BB700C7CE81 /* NetworkManager.swift in Sources */,
+				8487B32F27E347BF00D627CA /* FavoriteViewController.swift in Sources */,
 				8474EE4127DF48CA00C7CE81 /* DownloadImg.swift in Sources */,
 				848B11AF27DB4ECF004541ED /* PhotoData.swift in Sources */,
 				846FB42027E097FE00EFA9FB /* ViewModel.swift in Sources */,

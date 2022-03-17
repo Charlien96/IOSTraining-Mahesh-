@@ -28,10 +28,12 @@ class NetworkManager: ImageSearch {
             let session = URLSession.shared
             let dataTask = session.dataTask(with: url!) {
                 data, responce, error in
-                
+                guard let data = data else {
+                    return
+                }
                 let decoded = JSONDecoder()
                 do{
-                    let decodedResponce = try decoded.decode(PhotoData.self, from: data!)
+                    let decodedResponce = try decoded.decode(PhotoData.self, from: data)
                     self.delegateViewModel?.updateImg(responce: decodedResponce)
                 }catch{
                     print(error.localizedDescription)

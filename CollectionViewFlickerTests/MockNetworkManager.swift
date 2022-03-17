@@ -14,11 +14,10 @@ class MockNetworkManager: ImageSearch {
 
     func getImage(searchText: String) {
         let bundle = Bundle(for: MockNetworkManager.self)
-        let url = bundle.url(forResource: "Images", withExtension:".json")!
-        
-        guard url != nil else  {
+        guard let url = bundle.url(forResource: "Images", withExtension:".json") else {
             return
         }
+        
         do {
             let data = try Data(contentsOf: url)
             
