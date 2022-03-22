@@ -103,6 +103,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="0aL-nl-kqz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IHa-bD-UBR">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -169,6 +170,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorites" id="HIS-3r-lS9"/>
                     <navigationItem key="navigationItem" id="OiD-vk-1zY"/>
+                    <connections>
+                        <outlet property="favCollectionView" destination="UCt-aW-TlO" id="rJP-7J-yPv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hym-pU-POy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -17,6 +17,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         collectionView.dataSource = self
+        collectionView.delegate = self
         searchBar.delegate = self
         viewModel = ViewModel(delegate: self)
         viewModel.delegate = self
@@ -28,6 +29,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
             viewModel.getImage(searchText: text)
         }
     }
+    
 }
 
 extension ViewController: UICollectionViewDataSource {
@@ -52,6 +54,15 @@ extension ViewController: UICollectionViewDataSource {
         cell.imgView.downLoadImage(owner: imageReturnedURL)
         
         return cell
+    }
+}
+
+extension ViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let manageObjectContext = appDelegate.persistentContainer.viewContext
+        ImageEntity.saveEntity(server: viewModel.data[indexPath.row].server, id: viewModel.data[indexPath.row].id, secret: viewModel.data[indexPath.row].secret, farm: viewModel.data[indexPath.row].farm, moc: manageObjectContext)
+        appDelegate.saveContext()
     }
 }
 
